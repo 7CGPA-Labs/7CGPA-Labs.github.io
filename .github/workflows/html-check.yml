@@ -1,0 +1,34 @@
+# ============================================================================
+# HTML validation + link check (CI)
+# ----------------------------------------------------------------------------
+# Runs on pull requests and pushes to `main`. Catches broken HTML and dead
+# links before they hit production. Non-blocking for external link flakiness.
+# ============================================================================
+name: HTML & Link Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate HTML (HTMLHint)
+        run: |
+          npm install -g htmlhint
+          htmlhint "**/*.html"
+
+      - name: Check links (Lychee)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --verbose --no-progress --accept 200,206,429 "**/*.html"
+          fail: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
