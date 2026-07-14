@@ -45,13 +45,6 @@ limited resources into focused, self-contained software that just works.
 
 ## 🚀 Featured projects
 
-| Project | What it is | Stack |
-| :------ | :--------- | :---- |
-| **[lubuntu-lark-neuroshell](https://github.com/7CGPA-Labs/lubuntu-lark-neuroshell)** | Combining Gemini and Copilot as a widget in `lxqt-panel` | `C++` |
-| **[html-shell-daemon](https://github.com/7CGPA-Labs/html-shell-daemon)** | A combination of qt-shell, WebEngine, and PWA tech | `QML` |
-| **[retro-mesh-console](https://github.com/7CGPA-Labs/retro-mesh-console)** | An upgraded version of the webos-retro-console | `C` |
-| **[demo-repository](https://github.com/7CGPA-Labs/demo-repository)** | A repo showcasing the best GitHub has to offer | `HTML` |
-
 > 📦 Browse everything on our **[repositories page »](https://github.com/7CGPA-Labs?tab=repositories)**
 
 ---
